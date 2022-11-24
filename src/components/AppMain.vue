@@ -6,9 +6,7 @@
 
 <template>
     <main>
-        <div class="container">
-            <p>--> Content goes here</p>
-        </div>
+        <div class="jumbotron"></div>
     </main>
 </template>
 
@@ -16,6 +14,8 @@
     main {
         background-color: var(--bg-main-color);
         color: white;
-        padding: 2.8125rem 0;
+        background-image: url('../assets/jumbotron.jpg');
+        background-size: cover;
+        height: 560px;
     }
 </style>

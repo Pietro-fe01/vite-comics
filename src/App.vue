@@ -13,6 +13,7 @@
     <!-- Pre-footer -->
     <AppDcBar/>
 
+    <!-- Footer Main & Bottom -->
     <AppFooter/>
   </footer>
 </template>
