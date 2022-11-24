@@ -6,72 +6,94 @@
 
 <template>
     <div class="main-footer">
-        <div class=main-footer__left>
-            <div>
+        <div class="container">
+            <div class=main-footer__left>
+                <div>
+                    <h3>DC COMICS</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Characters</a></li>
+                            <li><a href="#">Comics</a></li>
+                            <li><a href="#">Movies</a></li>
+                            <li><a href="#">TV</a></li>
+                            <li><a href="#">Games</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div>
+                    <h3>SHOP</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Shop DC</a></li>
+                            <li><a href="#">Shop DC Collectibles</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class=main-footer__middle>
                 <h3>DC COMICS</h3>
                 <nav>
                     <ul>
-                        <li><a href="#"><small>Characters</small></a></li>
-                        <li><a href="#"><small>Comics</small></a></li>
-                        <li><a href="#"><small>Movies</small></a></li>
-                        <li><a href="#"><small>TV</small></a></li>
-                        <li><a href="#"><small>Games</small></a></li>
-                        <li><a href="#"><small>Videos</small></a></li>
-                        <li><a href="#"><small>News</small></a></li>
+                        <li><a href="#">Terms Of Use</a></li>
+                        <li><a href="#">Privacy policy (New)</a></li>
+                        <li><a href="#">Ad Choices</a></li>
+                        <li><a href="#">Advertising</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Subscriptions</a></li>
+                        <li><a href="#">Talent Workshops</a></li>
+                        <li><a href="#">CPSC Certificates</a></li>
+                        <li><a href="#">Ratings</a></li>
+                        <li><a href="#">Shop Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+
                     </ul>
                 </nav>
             </div>
 
-            <div>
-                <h3>SHOP</h3>
+            <div class=main-footer__right>
+                <h3>DC COMICS</h3>
                 <nav>
                     <ul>
-                        <li><a href="#"><small>Shop DC</small></a></li>
-                        <li><a href="#"><small>Shop DC Collectibles</small></a></li>
+                        <li><a href="#">DC</a></li>
+                        <li><a href="#">MAD Magazine</a></li>
+                        <li><a href="#">DC Kids</a></li>
+                        <li><a href="#">DC Universe</a></li>
+                        <li><a href="#">DC Power Visa</a></li>
                     </ul>
                 </nav>
             </div>
-        </div>
-
-        <div class=main-footer__middle>
-            <h3>DC COMICS</h3>
-            <nav>
-                <ul>
-                    <li><a href="#"><small>Terms Of Use</small></a></li>
-                    <li><a href="#"><small>Privacy policy (New)</small></a></li>
-                    <li><a href="#"><small>Ad Choices</small></a></li>
-                    <li><a href="#"><small>Advertising</small></a></li>
-                    <li><a href="#"><small>Jobs</small></a></li>
-                    <li><a href="#"><small>Subscriptions</small></a></li>
-                    <li><a href="#"><small>Talent Workshops</small></a></li>
-                    <li><a href="#"><small>CPSC Certificates</small></a></li>
-                    <li><a href="#"><small>Ratings</small></a></li>
-                    <li><a href="#"><small>Shop Help</small></a></li>
-                    <li><a href="#"><small>Contact Us</small></a></li>
-
-                </ul>
-            </nav>
-        </div>
-
-        <div class=main-footer__right>
-            <h3>DC COMICS</h3>
-            <nav>
-                <ul>
-                    <li><a href="#"><small>DC</small></a></li>
-                    <li><a href="#"><small>MAD Magazine</small></a></li>
-                    <li><a href="#"><small>DC Kids</small></a></li>
-                    <li><a href="#"><small>DC Universe</small></a></li>
-                    <li><a href="#"><small>DC Power Visa</small></a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="bg-image">
+            <div class="bg-image"></div>
         </div>
     </div>
 
     <div class="bottom-footer">
-        ciao
+        <div class="container">
+            <div class="sign-up">
+                <button>SIGN-UP NOW!</button>
+            </div>
+            <div class="follow-us">
+                <h2>FOLLOW-US</h2>
+                <a href="#">
+                    <img src="../assets/footer-facebook.png" alt="facebook-img">
+                </a>
+                <a href="#">
+                    <img src="../assets/footer-twitter.png" alt="twitter-img">
+                </a>
+                <a href="#">
+                    <img src="../assets/footer-youtube.png" alt="youtube-img">
+                </a>
+                <a href="#">
+                    <img src="../assets/footer-pinterest.png" alt="pinterest-img">
+                </a>
+                <a href="#">
+                    <img src="../assets/footer-periscope.png" alt="periscope-img">
+                </a>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -79,12 +101,14 @@
     .main-footer{
         background-image: url('../assets/footer-bg.jpg');
         background-size: cover;
-        display: flex;
-        padding: 0 6.25rem;
         padding-top: 2.1875rem;
         padding-bottom: 2.5rem;
         position: relative;
         z-index: -1;
+
+        & .container{
+            display: flex;
+        }
 
         &__left nav:first-of-type{
             margin-bottom: 1.25rem;
@@ -104,6 +128,7 @@
             & li a{
                 color: #698887;
                 text-decoration: none;
+                font-size: .875rem;
             }
         }
 
@@ -119,8 +144,31 @@
         }   
     }
     .bottom-footer{
-        height: 100px;
-        width: 100%;
         background-color: var(--bg-footer-bottom-color);
+        
+        & .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.1875rem 0;
+
+            & .sign-up button{
+                color: white;
+                border: 2.5px solid var(--footer-bottom-color);
+                padding: .9375rem .625rem;
+            }
+            
+            & .follow-us{
+                display: flex;
+
+                & h2{
+                    color: var(--footer-bottom-color);
+                }
+
+                & img{
+                    margin-left: 1.25rem;
+                }
+            }
+        }
     }
 </style>
