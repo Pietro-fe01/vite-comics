@@ -71,12 +71,32 @@
         }
         & .header__nav ul li{
             margin-left: 1.5625rem;
+            position: relative;
         }
         & .header__nav ul li a{
             color: var(--nav-link-color);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: .8125rem;
         }
+    }
+
+    /*--------------------
+        ACTIVE LINK MENU
+    ---------------------*/
+    .header__nav ul li:hover a,
+    .header__nav ul li:nth-child(2) a{
+        color: #0282f9;
+    }
+    .header__nav ul li:hover::after,
+    .header__nav ul li:nth-child(2)::after{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 4px;
+        background-color: #0282f9;
+        position: absolute;
+        bottom: -42px;
+        left: 0;
     }
 </style>

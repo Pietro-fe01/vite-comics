@@ -150,7 +150,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2.1875rem 0;
+            padding: 1.5625rem 0;
 
             & .sign-up button{
                 color: white;

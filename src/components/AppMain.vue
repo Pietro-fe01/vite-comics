@@ -13,9 +13,10 @@
 <style lang="scss" scoped>
     main {
         background-color: var(--bg-main-color);
-        color: white;
-        background-image: url('../assets/jumbotron.jpg');
-        background-size: cover;
-        height: 560px;
+        & .jumbotron{
+            background-image: url('../assets/jumbotron.jpg');
+            background-size: cover;
+            height: 555px;
+        }
     }
 </style>
