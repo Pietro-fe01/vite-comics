@@ -46,7 +46,7 @@
 <style lang="scss" scoped>
     .pre-footer{
         background-color: var(--bg-pre-footer-color);
-        padding: 3.125rem 0;
+        padding: 2.5rem 0;
         & .cards{
             display: flex;
             justify-content: space-between;

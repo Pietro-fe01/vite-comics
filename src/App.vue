@@ -2,17 +2,19 @@
   import AppHeader from './components/AppHeader.vue';
   import AppMain from './components/AppMain.vue';
   import AppDcBar from './components/AppDcBar.vue';
+  import AppFooter from './components/AppFooter.vue'
 </script>
 
 <template>
   <!-- Header --><AppHeader/><!-- /Header -->
   <!-- Main --><AppMain/><!-- /Main -->
-  
-  <!-- Footer -->
+
   <footer>
+    <!-- Pre-footer -->
     <AppDcBar/>
+
+    <AppFooter/>
   </footer>
-  <!-- /Footer -->
 </template>
 
 <style lang="scss">

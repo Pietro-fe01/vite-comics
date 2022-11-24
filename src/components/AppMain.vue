@@ -16,6 +16,6 @@
     main {
         background-color: var(--bg-main-color);
         color: white;
-        padding: 3.4375rem 0;
+        padding: 2.8125rem 0;
     }
 </style>

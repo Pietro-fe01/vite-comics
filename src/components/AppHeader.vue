@@ -59,7 +59,6 @@
     header {
         display: flex;
         justify-content: space-between;
-
         & .header__logo img{
             max-width: 4.375rem;
             margin: .9375rem 0;
