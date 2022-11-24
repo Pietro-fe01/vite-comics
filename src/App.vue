@@ -1,15 +1,11 @@
-<script>
+<script setup>
   import AppHeader from './components/AppHeader.vue';
-
-  export default{
-    components: {
-      AppHeader,
-    }
-  }
+  import AppMain from './components/AppMain.vue';
 </script>
 
 <template>
   <AppHeader/>
+  <AppMain/>
 </template>
 
 <style lang="scss">
