@@ -61,6 +61,10 @@
                 color: white;
                 text-decoration: none;
 
+                &:hover{
+                    filter:drop-shadow(0 0 5px white)
+                }
+
                 & img{
                     width: 2.5rem;
                     margin-right: .625rem;

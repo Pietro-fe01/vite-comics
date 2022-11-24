@@ -156,6 +156,19 @@
                 color: white;
                 border: 2.5px solid var(--footer-bottom-color);
                 padding: .9375rem .625rem;
+
+                &:hover{
+                    background-color: rgba($color: white, $alpha: 0.2);
+                    animation: shake 0.1s linear;
+                }
+                @keyframes shake{
+                    0% {
+                        transform: rotate(-10deg);
+                    }
+                    100% {
+                        transform: rotate(10deg);
+                    }
+                }
             }
             
             & .follow-us{
@@ -167,6 +180,10 @@
 
                 & img{
                     margin-left: 1.25rem;
+
+                    &:hover{
+                        filter: drop-shadow(0 0 4px white);
+                    }
                 }
             }
         }
