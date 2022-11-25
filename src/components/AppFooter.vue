@@ -101,7 +101,7 @@
                 </nav>
             </div>
             <!-- /Menu link footer right-->
-            
+
             <div class="bg-image"></div>
         </div>
     </div>
@@ -165,6 +165,10 @@
                 color: #698887;
                 text-decoration: none;
                 font-size: .875rem;
+            }
+            
+            & a:hover{
+                color: rgba($color: #fff, $alpha: 0.8) !important;
             }
         }
 
