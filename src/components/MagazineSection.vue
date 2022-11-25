@@ -88,9 +88,11 @@ export default {
         <div class="magazine" v-for="magazine in magazines">
             <div class="magazine__image">
                 <img :src="magazine.thumb" :alt="magazine.series">
+                <span class="price">{{magazine.price}}</span>
             </div>
             <div class="magazine__title">
-                <span>{{magazine.series.toUpperCase()}}</span>
+                <span class="title">{{magazine.series.toUpperCase()}}</span>
+                <small class="genre">{{magazine.type}}</small>
             </div>
         </div>
         <!-- /Singola CARD magazine -->
@@ -111,6 +113,7 @@ export default {
             width: calc(100% / 6 - 30px);
             margin: 0 .9375rem;
             margin-bottom: 2.1875rem;
+            transition: transform 0.3s;
 
             &:hover{
                 transform: scale(1.2);
@@ -121,16 +124,40 @@ export default {
                 }
             }
 
-            &__image img{
+            &__image{
+                position: relative;
+
+                img{
                 width: 100%;
                 height: 180px;
                 object-fit: cover;
                 object-position: center top;
                 margin-bottom: .625rem;
+                }
+
+                .price{
+                    position: absolute;
+                    right: 0;
+                    bottom: 14px;
+                    padding: 0 .3125rem;
+                    background-color: rgba($color: #fff, $alpha: 0.7);
+                    color: red;
+                    font-weight: bold;
+                }
             }
 
-            &__title span{
+            &__title .title{
                 font-size: .8125rem;
+                font-style: italic;
+            }
+
+            &__title .genre{
+                display: block;
+                color: grey;
+                
+                &::first-letter{
+                    text-transform: capitalize;
+                }
             }
         }
 
