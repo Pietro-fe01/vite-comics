@@ -128,7 +128,7 @@ export default {
         button{
             background-color: #0282f9;
             color: white;
-            padding: .625rem 2.5rem;
+            padding: .5rem 3.125rem;
             font-weight: bold;
             margin-bottom: 1.25rem;
             align-self: center;

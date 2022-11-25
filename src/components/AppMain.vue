@@ -11,7 +11,9 @@ export default {
 
 <template>
   <main>
-    <section class="jumbotron"></section>
+    <section class="jumbotron">
+      <img src="../assets/jumbotron.jpg" alt="">
+    </section>
     <MagazineSection/>
   </main>
 </template>
@@ -19,10 +21,11 @@ export default {
 <style lang="scss" scoped>
 main {
   background-color: var(--bg-main-color);
-  & .jumbotron {
-    background-image: url("../assets/jumbotron.jpg");
-    background-size: cover;
-    height: 555px;
+  & .jumbotron img{
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: top;
   }
 }
 </style>
