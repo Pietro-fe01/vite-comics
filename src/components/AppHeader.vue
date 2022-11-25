@@ -5,34 +5,54 @@
             return{
                 menuLinks: [
                     {
-                        linkName: 'CHARACTERS',
+                        href: '#',
+                        label: 'CHARACTERS',
+                        active: false,
                     },
                     {
-                        linkName: 'COMICS',
+                        href: '#',
+                        label: 'COMICS',
+                        active: false,
                     },
                     {
-                        linkName: 'MOVIES',
+                        href: '#',
+                        label: 'MOVIES',
+                        active: false,
                     },
                     {
-                        linkName: 'TV',
+                        href: '#',
+                        label: 'TV',
+                        active: false,
                     },
                     {
-                        linkName: 'GAMES',
+                        href: '#',
+                        label: 'GAMES',
+                        active: false,
                     },
                     {
-                        linkName: 'COLLECTIBLES',
+                        href: '#',
+                        label: 'COLLECTIBLES',
+                        active: false,
                     },
                     {
-                        linkName: 'VIDEOS',
+                        href: '#',
+                        label: 'VIDEOS',
+                        active: false,
                     },
                     {
-                        linkName: 'FANS',
+                        href: '#',
+                        label: 'FANS',
+                        active: false,
                     },
                     {
-                        linkName: 'NEWS',
+                        href: '#',
+                        label: 'NEWS',
+                        active: false,
                     },
                     {
-                        linkName: 'SHOP',
+                        href: '#',
+                        label: 'SHOP',
+                        active: false,
                     }
                 ],
             }
@@ -49,7 +69,7 @@
         </div>
         <nav class="header__nav">
             <ul>
-                <li v-for="link in menuLinks"><a href="#">{{link.linkName}}</a></li>
+                <li v-for="link in menuLinks"><a :href="link.href">{{link.label}}</a></li>
             </ul>
         </nav>
     </header>

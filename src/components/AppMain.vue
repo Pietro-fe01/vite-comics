@@ -1,22 +1,28 @@
 <script>
-    export default {
-        name: 'AppMain',
-    }
+import MagazineSection from './MagazineSection.vue';
+
+export default {
+  name: "AppMain",
+  components: {
+    MagazineSection
+  }
+};
 </script>
 
 <template>
-    <main>
-        <div class="jumbotron"></div>
-    </main>
+  <main>
+    <section class="jumbotron"></section>
+    <MagazineSection/>
+  </main>
 </template>
 
 <style lang="scss" scoped>
-    main {
-        background-color: var(--bg-main-color);
-        & .jumbotron{
-            background-image: url('../assets/jumbotron.jpg');
-            background-size: cover;
-            height: 555px;
-        }
-    }
+main {
+  background-color: var(--bg-main-color);
+  & .jumbotron {
+    background-image: url("../assets/jumbotron.jpg");
+    background-size: cover;
+    height: 555px;
+  }
+}
 </style>
