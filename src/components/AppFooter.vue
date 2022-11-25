@@ -1,71 +1,107 @@
 <script>
     export default {
         name: 'AppFooter',
+        data(){
+            return {
+                footerLinks: [
+                    {
+                        title: 'DC COMICS',
+                        links: [
+                            'Characters',
+                            'Comics',
+                            'Movies',
+                            'TV',
+                            'Games',
+                            'Videos',
+                            'News'
+                        ]
+                    },
+                    {
+                        title: 'SHOP',
+                        links: [
+                            'Shop DC',
+                            'Shop DC Collectibles'
+                        ]
+                    },
+                    {
+                        title: 'DC',
+                        links: [
+                            'Terms Of Use',
+                            'Privacy policy (New)',
+                            'Ad Choices',
+                            'Advertising',
+                            'Jobs',
+                            'Subscriptions',
+                            'Talent Workshops',
+                            'CPSC Certificates',
+                            'Ratings',
+                            'Shop Help',
+                            'Contact Us',
+                        ]
+                    },
+                    {
+                        title: 'SITES',
+                        links: [
+                            'DC',
+                            'MAD Magazine',
+                            'DC Kids',
+                            'DC Universe',
+                            'DC Power Visa'
+                        ]
+                    }
+                ]
+            }
+        }
     }
 </script>
 
 <template>
     <div class="main-footer">
         <div class="container">
+            <!-- Menu link footer left -->
             <div class=main-footer__left>
                 <div>
-                    <h3>DC COMICS</h3>
+                    <h3>{{footerLinks[0].title}}</h3>
                     <nav>
                         <ul>
-                            <li><a href="#">Characters</a></li>
-                            <li><a href="#">Comics</a></li>
-                            <li><a href="#">Movies</a></li>
-                            <li><a href="#">TV</a></li>
-                            <li><a href="#">Games</a></li>
-                            <li><a href="#">Videos</a></li>
-                            <li><a href="#">News</a></li>
+                            <li v-for="link in footerLinks[0].links"><a href="#">{{link}}</a></li>
                         </ul>
                     </nav>
                 </div>
 
                 <div>
-                    <h3>SHOP</h3>
+                    <h3>{{footerLinks[1].title}}</h3>
                     <nav>
                         <ul>
-                            <li><a href="#">Shop DC</a></li>
-                            <li><a href="#">Shop DC Collectibles</a></li>
+                            <li v-for="link in footerLinks[1].links"><a href="#">{{link}}</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
+            <!-- /Menu link footer left-->
 
+            <!-- Menu link footer middle-->
             <div class=main-footer__middle>
-                <h3>DC COMICS</h3>
+                <h3>{{footerLinks[2].title}}</h3>
                 <nav>
                     <ul>
-                        <li><a href="#">Terms Of Use</a></li>
-                        <li><a href="#">Privacy policy (New)</a></li>
-                        <li><a href="#">Ad Choices</a></li>
-                        <li><a href="#">Advertising</a></li>
-                        <li><a href="#">Jobs</a></li>
-                        <li><a href="#">Subscriptions</a></li>
-                        <li><a href="#">Talent Workshops</a></li>
-                        <li><a href="#">CPSC Certificates</a></li>
-                        <li><a href="#">Ratings</a></li>
-                        <li><a href="#">Shop Help</a></li>
-                        <li><a href="#">Contact Us</a></li>
-
+                        <li v-for="link in footerLinks[2].links"><a href="#">{{link}}</a></li>
                     </ul>
                 </nav>
             </div>
+            <!-- /Menu link footer middle-->
 
+            <!-- Menu link footer right-->
             <div class=main-footer__right>
-                <h3>DC COMICS</h3>
+                <h3>{{footerLinks[3].title}}</h3>
                 <nav>
                     <ul>
-                        <li><a href="#">DC</a></li>
-                        <li><a href="#">MAD Magazine</a></li>
-                        <li><a href="#">DC Kids</a></li>
-                        <li><a href="#">DC Universe</a></li>
-                        <li><a href="#">DC Power Visa</a></li>
+                        <li v-for="link in footerLinks[3].links"><a href="#">{{link}}</a></li>
                     </ul>
                 </nav>
             </div>
+            <!-- /Menu link footer right-->
+            
             <div class="bg-image"></div>
         </div>
     </div>
@@ -104,7 +140,7 @@
         padding-top: 2.1875rem;
         padding-bottom: 2.5rem;
         position: relative;
-        z-index: -1;
+        // z-index: -1;
 
         & .container{
             display: flex;
