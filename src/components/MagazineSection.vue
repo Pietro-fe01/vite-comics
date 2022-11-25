@@ -112,6 +112,15 @@ export default {
             margin: 0 .9375rem;
             margin-bottom: 2.1875rem;
 
+            &:hover{
+                transform: scale(1.2);
+                cursor: pointer;
+                
+                .magazine__title span{
+                    text-decoration: underline;
+                }
+            }
+
             &__image img{
                 width: 100%;
                 height: 180px;
@@ -132,6 +141,10 @@ export default {
             font-weight: bold;
             margin-bottom: 1.25rem;
             align-self: center;
+
+            &:hover{
+                filter: drop-shadow(0 0 5px white);
+            }
         }
     }
 </style>
