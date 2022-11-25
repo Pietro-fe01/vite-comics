@@ -84,6 +84,7 @@ export default {
 
 <template>
     <section class="magazines container">
+        <!-- Singola CARD magazine -->
         <div class="magazine" v-for="magazine in magazines">
             <div class="magazine__image">
                 <img :src="magazine.thumb" :alt="magazine.series">
@@ -92,6 +93,9 @@ export default {
                 <span>{{magazine.series.toUpperCase()}}</span>
             </div>
         </div>
+        <!-- /Singola CARD magazine -->
+
+        <button>LOAD MORE</button>
     </section>
 </template>
 
@@ -99,14 +103,14 @@ export default {
     .magazines.container{
         color: white;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         padding-top: 3.125rem;
 
         .magazine{
             width: calc(100% / 6 - 30px);
-            margin-bottom: 3.125rem;
-            margin-right: .9375rem;
+            margin: 0 .9375rem;
+            margin-bottom: 2.1875rem;
 
             &__image img{
                 width: 100%;
@@ -119,6 +123,15 @@ export default {
             &__title span{
                 font-size: .8125rem;
             }
+        }
+
+        button{
+            background-color: #0282f9;
+            color: white;
+            padding: .625rem 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.25rem;
+            align-self: center;
         }
     }
 </style>
