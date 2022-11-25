@@ -56,6 +56,20 @@
                     }
                 ],
             }
+        },
+        methods: {
+            selectMenu: function(index){
+                for(let i=0; i<this.menuLinks.length; i++){
+                    if(index === i){
+                        this.menuLinks[index].active = true;
+                    } else {
+                        this.menuLinks[i].active = false;
+                    }
+                }
+            }
+        },
+        mounted(){
+            this.menuLinks[1].active = true;
         }
     }
 </script>
@@ -69,7 +83,7 @@
         </div>
         <nav class="header__nav">
             <ul>
-                <li v-for="link in menuLinks"><a :href="link.href">{{link.label}}</a></li>
+                <li @click="selectMenu(index)" v-for="(link, index) in menuLinks"><a :class="{active : link.active}" :href="link.href">{{link.label}}</a></li>
             </ul>
         </nav>
     </header>
@@ -104,12 +118,10 @@
     /*--------------------
         ACTIVE LINK MENU
     ---------------------*/
-    .header__nav ul li:hover a,
-    .header__nav ul li:nth-child(2) a{
-        color: #0282f9;
+    .active{
+        color: #0282f9 !important;
     }
-    .header__nav ul li:hover::after,
-    .header__nav ul li:nth-child(2)::after{
+    .active::after{
         content: "";
         display: inline-block;
         width: 100%;
