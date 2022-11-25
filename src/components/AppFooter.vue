@@ -140,7 +140,7 @@
         padding-top: 2.1875rem;
         padding-bottom: 2.5rem;
         position: relative;
-        // z-index: -1;
+        overflow: hidden;
 
         & .container{
             display: flex;
