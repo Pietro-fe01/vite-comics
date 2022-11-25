@@ -49,6 +49,28 @@
                             'DC Power Visa'
                         ]
                     }
+                ],
+                socialLinks: [
+                    {
+                        socialName: 'Facebook',
+                        socialImage: 'footer-facebook.png'
+                    },
+                    {
+                        socialName: 'Twitter',
+                        socialImage: 'footer-twitter.png'
+                    },
+                    {
+                        socialName: 'Youtube',
+                        socialImage: 'footer-youtube.png'
+                    },
+                    {
+                        socialName: 'Pinterest',
+                        socialImage: 'footer-pinterest.png'
+                    },
+                    {
+                        socialName: 'Periscope',
+                        socialImage: 'footer-periscope.png'
+                    }
                 ]
             }
         }
@@ -102,35 +124,26 @@
             </div>
             <!-- /Menu link footer right-->
 
-            <div class="bg-image"></div>
+            <div class="bg-image"></div> <!-- Immagine di sfondo footer -->
         </div>
     </div>
 
+    <!-- Footer bottom -->
     <div class="bottom-footer">
         <div class="container">
             <div class="sign-up">
                 <button>SIGN-UP NOW!</button>
             </div>
+
             <div class="follow-us">
                 <h2>FOLLOW-US</h2>
-                <a href="#">
-                    <img src="../assets/footer-facebook.png" alt="facebook-img">
-                </a>
-                <a href="#">
-                    <img src="../assets/footer-twitter.png" alt="twitter-img">
-                </a>
-                <a href="#">
-                    <img src="../assets/footer-youtube.png" alt="youtube-img">
-                </a>
-                <a href="#">
-                    <img src="../assets/footer-pinterest.png" alt="pinterest-img">
-                </a>
-                <a href="#">
-                    <img src="../assets/footer-periscope.png" alt="periscope-img">
+                <a v-for="social in socialLinks" href="#">
+                    <img :src="`src/assets/${social.socialImage}`" :alt="`${social.socialName}-social-img`">
                 </a>
             </div>
         </div>
     </div>
+    <!-- /Footer bottom -->
 </template>
 
 <style lang="scss" scoped>
